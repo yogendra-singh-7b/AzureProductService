@@ -7,13 +7,29 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: YogiAgentpool
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '10.x'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- script: dotnet restore src/cicdproductservice/cicdproductservice.csproj
+  displayName: 'Restore'
+
+- script: dotnet build src/cicdproductservice/cicdproductservice.csproj --no-restore
+  displayName: 'Build'
+
+- script: dotnet test test/MyTest.Tests/MyTest.Tests.csproj
+  displayName: 'Test'
+
+- script: dotnet publish src/cicdproductservice/cicdproductservice.csproj -c Release -o $(Build.ArtifactStagingDirectory)
+  displayName: 'Publish'
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'azserviceconnection'        # Service connection name
+    appType: 'webApp'
+    appName: 'devapp-service'                    # Web App name
+    package: '$(Build.ArtifactStagingDirectory)'
