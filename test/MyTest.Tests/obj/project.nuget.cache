@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZyeU2jxPhZw=",
+  "dgSpecHash": "xzwk9DgYMnk=",
   "success": true,
-  "projectFilePath": "c:\\Development\\DotNet\\CICD\\cicdapp\\test\\MyTest.Tests\\MyTest.Tests.csproj",
+  "projectFilePath": "C:\\Development\\DotNet\\CICD\\cicdapp\\test\\MyTest.Tests\\MyTest.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Yogendra\\.nuget\\packages\\coverlet.collector\\6.0.4\\coverlet.collector.6.0.4.nupkg.sha512",
     "C:\\Users\\Yogendra\\.nuget\\packages\\microsoft.applicationinsights\\2.22.0\\microsoft.applicationinsights.2.22.0.nupkg.sha512",

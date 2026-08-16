@@ -3,7 +3,6 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using cicdproductservice.Data;
 
@@ -11,12 +10,10 @@ using cicdproductservice.Data;
 
 namespace cicdproductservice.Migrations
 {
-    [DbContext(typeof(ProductDBContext))]
-    [Migration("20260809191854_mig1111")]
-    partial class mig1111
+    [DbContext(typeof(PaymentDBContext))]
+    partial class PaymentDBContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,9 +22,9 @@ namespace cicdproductservice.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("cicdproductservice.Model.Product", b =>
+            modelBuilder.Entity("cicdproductservice.Model.Payment", b =>
                 {
-                    b.Property<Guid>("ProductId")
+                    b.Property<Guid>("PaymentId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -38,9 +35,9 @@ namespace cicdproductservice.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ProductId");
+                    b.HasKey("PaymentId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Payments");
                 });
 #pragma warning restore 612, 618
         }

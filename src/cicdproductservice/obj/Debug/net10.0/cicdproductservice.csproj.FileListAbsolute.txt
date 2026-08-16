@@ -159,3 +159,6 @@ C:\Development\DotNet\CICD\cicdapp\src\cicdproductservice\obj\Debug\net10.0\cicd
 C:\Development\DotNet\CICD\cicdapp\src\cicdproductservice\obj\Debug\net10.0\ref\cicdproductservice.dll
 C:\Development\DotNet\CICD\cicdapp\src\cicdproductservice\bin\Debug\net10.0\appsettings.Development.json
 C:\Development\DotNet\CICD\cicdapp\src\cicdproductservice\bin\Debug\net10.0\appsettings.json
+C:\Development\DotNet\CICD\cicdapp\src\cicdproductservice\obj\Debug\net10.0\cicdproductservice.sourcelink.json
+C:\Development\DotNet\CICD\cicdapp\src\cicdproductservice\bin\Debug\net10.0\Azure.Extensions.AspNetCore.Configuration.Secrets.dll
+C:\Development\DotNet\CICD\cicdapp\src\cicdproductservice\bin\Debug\net10.0\Azure.Security.KeyVault.Secrets.dll

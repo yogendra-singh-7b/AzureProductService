@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace cicdproductservice.Model
 {
-    public class Product
+    public class Payment
     {
-        public Guid ProductId { get; set; }
-        public string ProductName { get; set; }
+        public Guid PaymentId { get; set; }
+        public string ProductName { get; set; } = string.Empty;
         public decimal Price { get; set; }
     }
 

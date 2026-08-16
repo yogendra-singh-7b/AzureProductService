@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Development\\DotNet\\CICD\\cicdapp\\test\\MyTest.Tests\\MyTest.Tests.csproj": {}
+    "C:\\Development\\DotNet\\CICD\\cicdapp\\test\\MyTest.Tests\\MyTest.Tests.csproj": {}
   },
   "projects": {
-    "c:\\Development\\DotNet\\CICD\\cicdapp\\test\\MyTest.Tests\\MyTest.Tests.csproj": {
+    "C:\\Development\\DotNet\\CICD\\cicdapp\\test\\MyTest.Tests\\MyTest.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Development\\DotNet\\CICD\\cicdapp\\test\\MyTest.Tests\\MyTest.Tests.csproj",
+        "projectUniqueName": "C:\\Development\\DotNet\\CICD\\cicdapp\\test\\MyTest.Tests\\MyTest.Tests.csproj",
         "projectName": "MyTest.Tests",
-        "projectPath": "c:\\Development\\DotNet\\CICD\\cicdapp\\test\\MyTest.Tests\\MyTest.Tests.csproj",
+        "projectPath": "C:\\Development\\DotNet\\CICD\\cicdapp\\test\\MyTest.Tests\\MyTest.Tests.csproj",
         "packagesPath": "C:\\Users\\Yogendra\\.nuget\\packages\\",
-        "outputPath": "c:\\Development\\DotNet\\CICD\\cicdapp\\test\\MyTest.Tests\\obj\\",
+        "outputPath": "C:\\Development\\DotNet\\CICD\\cicdapp\\test\\MyTest.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

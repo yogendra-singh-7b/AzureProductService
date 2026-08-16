@@ -1,15 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using cicdproductservice.Operation;
 using cicdproductservice.Service;
+using cicdproductservice.Data;
+using Azure.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<cicdproductservice.Data.ProductDBContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ProductDBConnection")));
+builder.Configuration.AddAzureKeyVault(
+    new Uri("https://yogikeyvault.vault.azure.net/"),
+    new DefaultAzureCredential());
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+builder.Services.AddDbContext<PaymentDBContext>(options =>
+    options.UseSqlServer(builder.Configuration["azproductdb-conn"]));
 builder.Services.AddControllers();
-builder.Services.AddScoped<IProductOperation, ProductOperation>();
+builder.Services.AddScoped<IPaymentOperation, PaymentOperation>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var app = builder.Build();

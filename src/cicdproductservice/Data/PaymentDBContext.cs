@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace cicdproductservice.Data
 {
-    public class ProductDBContext : DbContext
+    public class PaymentDBContext : DbContext
     {
 
-        public ProductDBContext(DbContextOptions<ProductDBContext> options) : base(options)
+        public PaymentDBContext(DbContextOptions<PaymentDBContext> options) : base(options)
         {
         }
 
-        public DbSet<cicdproductservice.Model.Product> Products { get; set; }
+        public DbSet<cicdproductservice.Model.Payment> Payments { get; set; }
     }
 }

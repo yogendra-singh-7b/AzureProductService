@@ -1,0 +1,91 @@
+## Build artifacts
+bin/
+obj/
+out/
+publish/
+artifacts/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## VS Code
+.vscode/
+.history/
+
+## Visual Studio
+.vs/
+*.psess
+*.vsp
+*.vspscc
+*.vssscc
+
+## Logs
+*.log
+logs/
+LogFiles/
+
+## NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+project.lock.json
+project.fragment.lock.json
+
+## Cache
+*.cache
+*.tmp
+*.temp
+*.DS_Store
+
+## Config transforms
+appsettings.*.local.json
+appsettings.Development.json
+appsettings.Local.json
+
+## Sensitive files
+secrets.json
+*.pfx
+*.key
+*.cer
+
+## Azure Key Vault local dev
+azure.keyvault.local.settings.json
+
+## Docker
+docker-compose.override.yml
+docker-compose.*.yml
+.docker/
+docker-compose.debug.yml
+
+## Kubernetes
+*.yaml.backup
+helm-chart/
+charts/
+k8s-temp/
+
+## Rider / JetBrains
+.idea/
+*.iml
+
+## Test results
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+## Publish profiles
+Properties/PublishProfiles/
+
+## Entity Framework
+Migrations/*Designer.cs
+Migrations/*Snapshot.cs
+
+## Others
+*.db
+*.bak
+*.mdf
+*.ldf

@@ -6,10 +6,10 @@ using cicdproductservice.Model;
 
 namespace cicdproductservice.Operation
 {
-    public interface IProductOperation
+    public interface IPaymentOperation
     {
-        public Product CreateProduct(Product product);
+        public Payment CreatePayment(Payment payment);
 
-        public IEnumerable<Product> GetProducts();
+        public IEnumerable<Payment> GetPayments();
     }
 }
