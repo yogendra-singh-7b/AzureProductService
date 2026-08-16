@@ -1,0 +1,35 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  name: YogiAgentpool
+
+steps:
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '10.x'
+
+- script: dotnet restore src/cicdproductservice/cicdproductservice.csproj
+  displayName: 'Restore'
+
+- script: dotnet build src/cicdproductservice/cicdproductservice.csproj --no-restore
+  displayName: 'Build'
+
+- script: dotnet test test/MyTest.Tests/MyTest.Tests.csproj
+  displayName: 'Test'
+
+- script: dotnet publish src/cicdproductservice/cicdproductservice.csproj -c Release -o $(Build.ArtifactStagingDirectory)
+  displayName: 'Publish'
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'azserviceconnection'        # Service connection name
+    appType: 'webApp'
+    appName: 'devapp-service'                    # Web App name
+    package: '$(Build.ArtifactStagingDirectory)'
