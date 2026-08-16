@@ -32,5 +32,12 @@ namespace cicdproductservice.Controller
             var result = _paymentOperation.GetPayments();
             return Ok(result);
         }
+
+        [HttpGet("GetPaymentById/{id}")]
+        public IActionResult GetPaymentById(string id)
+        {
+            var result = _paymentOperation.GetPaymentById(id);
+            return Ok(result);
+        }
     }
 }
