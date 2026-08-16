@@ -27,6 +27,11 @@ namespace cicdproductservice.Service
         {
             return _context.Payments.ToList();
         }
+        public Payment GetPaymentById(string id)
+        {
+            var payment = _context.Payments.FirstOrDefault(p => p.PaymentId.ToString() == id);
+            return payment ?? throw new KeyNotFoundException($"Payment with ID {id} not found.");
+        }
     }
 
 }

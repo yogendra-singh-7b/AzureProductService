@@ -11,5 +11,7 @@ namespace cicdproductservice.Operation
         public Payment CreatePayment(Payment payment);
 
         public IEnumerable<Payment> GetPayments();
+
+        public Payment GetPaymentById(string id);
     }
 }
